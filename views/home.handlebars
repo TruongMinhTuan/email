@@ -1,0 +1,33 @@
+ {{{example}}} {{{content}}} {{#each people}}
+
+<p>{{firstName}} {{lastName}}</p>
+
+{{/each}}
+
+<!-- create helper. -->
+{{#* inline "fullName"}} this is full name {{firstName}} {{lastName}}{{/inline}}
+
+<h1>Hello </h1>
+<ul>
+  {{#each people}}
+  <li>{{> fullName}}</li>
+  {{/each}}
+</ul>
+<table>
+  hi {{#each people}}
+  <tr>
+    <td>{{firstName}}</td>
+    <td>{{lastName}}</td>
+  </tr>
+
+
+  {{/each}}
+
+</table>
+{{#if showTitle}}
+<h1>Home</h1>
+{{/if}}
+<div class="people">
+  <h2>{{first_name}} {{last_name}}</h2>
+
+</div>
